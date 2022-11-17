@@ -1,0 +1,192 @@
+## Assignment Part-1
+Q1. Why do we call Python as a general purpose and high-level programming language?
+
+ Generally low level language like assembly language directly provides interface for operations on registers in the CPU for data manipulation and programming, but this will 
+ require architectural knowledge of the underlying and also takes a lot of time in development. Where as in a high level language, underlying machine level operations are abstracted
+ from the user. C++, Java and Python are the examples of high level languages. Python is called a general purpose language as it is used in broad topics like stand alone application development (GUI),
+ network applications( Web development), Scientific computing applications, Machine Learning applications etc.
+
+Q2. Why is Python called a dynamically typed language?
+
+In languages like c,c++,java we have specify the type of the variable at compile time. In Java there is leeway we can assign child class object to parent object at run time. 
+But either way we have to declare the type at compile time. Where as in python, variable type need not be defined, python variable can be a reference to any data type at any point of tim.
+
+
+Q3. List some pros and cons of Python programming language?
+
+Pros:
+ 
+	 Easy syntax compared to other languages, 
+	 Human Readable, 
+	 Easy to code, Hence extensively used in data science field.
+ 
+Cons:
+
+	Compared to c++, Java its very slow, hence not used in computationally heavy tasks. (like scientific computing)
+	Since its dynamically typed there might be unexpected errors at run time if errors/exceptions are not handled properly.
+
+Q4. In what all domains can we use Python?
+
+	1) Data Science
+	2) Web development 
+	3) GUI development
+	4) Mobile Application development
+
+Q5. What are variable and how can we declare them?
+
+     In python a variable is name that refers to a memory location which can store integers, floating point numbers, 
+	points to a list, tuple, dictionary or user defined class object. We can declare using the syntax Ex: a = 5 or b = [1,2,3] or c = 3.2. where a,b,c are variable names.
+
+Q6. How can we take an input from the user in Python?
+
+	using the command 
+	
+	variable_name = input()
+
+Q7. What is the default datatype of the value that has been taken as an input using input() function?
+
+    default datatype of the value taken by the input() is the string (str).
+
+Q8. What is type casting?
+
+	Changing the type of a variable from one type to another type.
+	Ex: int(5.8) = 5 ; float("6.8") = 6.8
+	
+Q9. Can we take more than one input from the user using single input() function? If yes, how? If no, why?
+
+	We can take multiple values seperated by some delimited like comma or space and then process the input string later to get different values.
+
+Q10. What are keywords?
+
+	These are some special reserved words by the language and should not be used as variable declaration.
+	Ex : for, while,in, print, input, range, int, str,...
+
+Q11. Can we use keywords as a variable? Support your answer with reason.
+
+    No keywords cannot be used as a variable. Doing this will result in syntax error.
+
+Q12. What is indentation? What's the use of indentaion in Python?
+
+	Indentation in python is used to define the scope of the statements(for,while,if,function definition) unlike the braces used in other languages like c,c++,java.
+	After these statments the following related statements are started with a tab space compared to the statements.
+
+Q13. How can we throw some output in Python?
+
+	We can show output in python using print statment
+
+Q14. What are operators in Python?
+
+
+
+Q15. What is difference between / and // operators?
+
+     / is for floating point division. Whereas // is for integer division. 
+
+Q16. Write a code that gives following as an output.
+```
+iNeuroniNeuroniNeuroniNeuron
+```
+
+for i in range(4):
+	print("iNeuron",end='')
+
+Q17. Write a code to take a number as an input from the user and check if the number is odd or even.
+
+Given_number = int(input("please enter the number"))
+if((Given_number%2)==0):
+	print("Even Number")
+else:
+	print("Odd Number")
+
+Q18. What are boolean operator?
+
+   and, or, not are the boolean operators in python
+
+
+Q19. What will the output of the following?
+```
+1 or 0 Ans: 1
+
+0 and 0 Ans: 0
+
+True and False and True Ans: False 
+
+1 or 0 or 0 Ans: 1
+```
+
+Q20. What are conditional statements in Python?
+
+    if, elif, else are the conditional statments in python. These help to execute different snippets of code based on the true/false value of the condition.
+
+
+Q21. What is use of 'if', 'elif' and 'else' keywords?
+
+     These are used conditional execution tasks. Ex : To find the max value of x,y,z below code is used
+	 
+	 if(x>y):
+		if(x>z):
+			max = x
+		else:
+			max = z
+	elif(y>z):
+		max = y
+	else:
+		max = z
+
+Q22. Write a code to take the age of person as an input and if age >= 18 display "I can vote". If age is < 18 display "I can't vote".
+
+     age = int(input("Please enter the age"))
+	 if(age>=18):
+		print("I can vote")
+	else:
+		print("I can't vote")
+
+
+Q23. Write a code that displays the sum of all the even numbers from the given list.
+```
+numbers = [12, 75, 150, 180, 145, 525, 50]
+```
+
+sum_of_even = 0
+for num in numbers:
+	if((num%2)==0):
+		sum_of_even += num
+print("sum of even numbers ", sum_of_even)
+
+Q24. Write a code to take 3 numbers as an input from the user and display the greatest no as output.
+
+
+	x = float(input())
+	y = float(input())
+	z = float(input())
+	
+	if(x>y):
+		if(x>z):
+			max = x
+		else:
+			max = z
+	elif(y>z):
+		max = y
+	else:
+		max = z
+		
+	print("max number is ", max)
+
+Q25. Write a program to display only those numbers from a list that satisfy the following conditions
+
+- The number must be divisible by five
+
+- If the number is greater than 150, then skip it and move to the next number
+
+- If the number is greater than 500, then stop the loop
+```
+numbers = [12, 75, 150, 180, 145, 525, 50]
+```
+
+for num in numbers:
+	if(num > 500):
+		break		
+	if(num > 150):
+		continue			
+	if(num%5)==0):
+		print(num)
